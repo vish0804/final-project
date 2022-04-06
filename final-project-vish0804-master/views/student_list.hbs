@@ -1,0 +1,29 @@
+{{#> dashboard}}
+    {{#*inline "content"}}
+    <p class="title">Add User</p>
+    <form style="width: 30rem;" class="mb-2" action="" method="post">
+        <input type="text" name="username" class="input mb-2">
+        <input type="password" name="password" class="input mb-2">
+        <button class="button is-success">Save</button>
+    </form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>username</th>
+                <th>password</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each students}}
+            <tr>     
+                <td>{{username}}</td>
+                <td>{{password}}</td>
+                <td><a href="/teacher/students/delete/{{_id}}" class="button is-danger">❌</a></td>   
+            </tr>
+             {{/each}}
+        </tbody>
+    </table>
+    {{/inline}}
+    
+{{/dashboard}}
